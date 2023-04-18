@@ -4,7 +4,7 @@
 - Using this as a source for copying under any circumstances defeats its purpose.
 - Therefore, please refrain from using it in such a manner.
 # `Keep up-to-date`
-If you would like to stay updated on my work and projects, please consider following me on GitHub. You can find my profile by searching for my username `Besthor` or by clicking on the link provided in this repository. `www.github.com/besthor`
+If you would like to stay updated on my work and projects, please consider following me on GitHub. You can find my profile by searching for my username `Besthor` or by clicking on the link provided in this repository. www.github.com/besthor
 Thank you for your support!
 
 # `Contributions`
