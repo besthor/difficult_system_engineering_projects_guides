@@ -1,0 +1,110 @@
+FIRST AND FOREMOST
+
+STEP A:
+HOW TO GENERATE SSH-KEY PAIRS
+1. OPEN YOUR  Ubuntu 20.04 SANDBOX because  Your server is configured with an Ubuntu 20.04 LTS environment.
+
+//run the following command ON UBUNTU 20.04 SANDBOX PLEASE  
+
+cd /root
+
+3. //this will generate a pair of cryptographic keys - a private key and a public key
+ssh-keygen -t rsa -b 4096 -f  /root/.ssh/school
+
+4. //this command will prompt you to enter the name of the file where the new file will be save, type:
+
+school
+
+5. //This will also prompt you to enter a "PassPhrase". A passphrase is a sequence of words, numbers, or symbols 
+that are used as a password to protect access to a computer system or network
+
+6. PLEASE USE A PASSPHRASE THAT YOU CAN ALWAYS REMEMBER
+
+YOU SHOULD GET AN IMAGE LIKE THIS:
+
+Generating public/private rsa key pair.
+Your identification has been saved in school.
+Your public key has been saved in school.pub.
+The key fingerprint is:
+5d:a8:c1:f5:98:b6:e5:c0:9b:ee:02:c4:d4:01:f3:ba vagrant@ubuntu
+The key's randomart image is:
++--[ RSA 4096]----+
+|      oo...      |
+|      .+.o =     |
+|     o  + B +    |
+|      o. = O     |
+|     .. S = .    |
+|      .. .       |
+|      E.  .      |
+|        ..       |
+|         ..      |
++-----------------+
+
+
+7.//run the following commands. this will show you 2 files, school.pub (this file conains your public key)
+school (this file contains your private keys and shool be stored in a safe place)
+
+ls -a
+
+cd .ssh
+
+ls
+
+vi school.pub
+
+STEP B:
+ HOW TO SAVE YOUR PUBLIC KEY ON YOUR PROFILE PAGE
+a. Copy the content of the school.pub file
+b. Go to you ALX INTRANET 
+c. Go to "My Profile"
+d. Go to "Technical information" section
+e. Paste the public key 
+f. Scroll down and click "Save my information"
+g. You should get this prompt "Your profile was successfully updated."
+
+STEP C:
+HOW TO ASK FOR A NEW SERVER
+//Go back to the SSH project page
+1. Scroll down to "Your Servers"
+you should see a similar table like this
+
+Name	            Username	    IP	                State	
+120054-web-01	    ubuntu	      57.109.118.560  	  pending   `ACTIONS`
+
+2. Click on "Actions"
+3. Click on "Ask a new server"
+4. Wait for the page to load
+5. If your server State is still showing "Pending"
+6. Please relaod the page until the state shows "Running"                                     
+
+
+STEP D:
+HOW TO CONNECT TO YOUR WEB-01 SERVER
+1. PLEASE OPEN YOUR (UBUNTU 20.04 LTS) SANDBOX AND RUN THE FOLLOWING COMMANDS
+
+	cd /root
+  ls -a
+	cd .ssh
+	ls
+	
+2. //create a shell environment variable that contains information about the new agent instance
+	
+  eval $('ssh-agent')
+
+3.//add the private key file for the "school" SSH key pair to the ssh-agent.	
+
+  ssh-add ~/.ssh/school
+
+
+PLEASE NOTE:
+4. In the next command, REPLACE 18.234.168.34 with YOUR OWN IP ADDRESS 
+//connect with your server
+
+  ssh ubuntu@18.234.168.34
+
+IF YOU HAVE CONNECTED SUCCESSFULLY you should see something like this:
+ubuntu@web-01-server:~$
+
+NOW,You can begin the tasks in the project
+
+
