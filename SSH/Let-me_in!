@@ -9,7 +9,7 @@ HOW TO CONNECT TO YOUR WEB-01 SERVER
 1. PLEASE OPEN YOUR (UBUNTU 20.04 LTS) SANDBOX AND RUN THE FOLLOWING COMMANDS
 
 	cd /root
-  ls -a
+	ls -a
 	cd .ssh
 	ls
 	
@@ -37,11 +37,14 @@ ls -a
 
 cd .ssh
 
+6. //Lets add ALX into the party. you will see two RSA keys in the file, the first belongs to the company providing the server
+the second RSA key is yours, you are about to bring ALX into this server
+
 sudo vim authorized_keys
 
 //go to the end of the file, copy and paste this new ssh key to the list of authorized_keys
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNdtrNGtTXe5Tp1EJQop8mOSAuRGLjJ6DW4PqX4wId/Kawz35ESampIqHSOTJmbQ8UlxdJuk0gAXKk3Ncle4safGYqM/VeDK3LN5iAJxf4kcaxNtS3eVxWBE5iF3FbIjOqwxw5Lf5sRa5yXxA8HfWidhbIG5TqKL922hPgsCGABIrXRlfZYeC0FEuPWdr6smOElSVvIXthRWp9cr685KdCI+COxlj1RdVsvIo+zunmLACF9PYdjB2s96Fn0ocD3c5SGLvDOFCyvDojSAOyE70ebIElnskKsDTGwfT4P6jh9OBzTyQEIS2jOaE5RQq4IB4DsMhvbjDSQrP0MdCLgwkN
 
 //save and exit the file
-T
-HEN CHECK YOUR CODE
+
+THEN CHECK YOUR CODE
