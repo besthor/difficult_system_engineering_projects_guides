@@ -1,6 +1,47 @@
 Now that you have successfully connected to your server, we would also like to join the party.
-
 Add the SSH public key below to your server so that we can connect using the ubuntu user.
-STEPS:
+NOTE:
+JUMP TO STEP 5 IF YOU ARE ALREADY IN YOUR SERVER
+BUT IF YOUR SERVER HAS CLOSED, CARRY OUT STEP 1 - 5 AGAIN
 
+STEPS:
+HOW TO CONNECT TO YOUR WEB-01 SERVER
+1. PLEASE OPEN YOUR (UBUNTU 20.04 LTS) SANDBOX AND RUN THE FOLLOWING COMMANDS
+
+	cd /root
+  ls -a
+	cd .ssh
+	ls
+	
+2. //create a shell environment variable that contains information about the new agent instance
+	
+  eval $('ssh-agent')
+
+3.//add the private key file for the "school" SSH key pair to the ssh-agent.	
+
+  ssh-add ~/.ssh/school
+
+
+PLEASE NOTE:
+4. In the next command, REPLACE 18.234.168.34 with YOUR OWN IP ADDRESS 
+//connect with your server
+
+  ssh ubuntu@18.234.168.34
+
+IF YOU HAVE CONNECTED SUCCESSFULLY you should see something like this:
+ubuntu@web-01-server:~$
+
+5. NOW TO ADD THE SSH KEY BELOW
+
+ls -a
+
+cd .ssh
+
+sudo vim authorized_keys
+
+//go to the end of the file, copy and paste this new ssh key to the list of authorized_keys
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNdtrNGtTXe5Tp1EJQop8mOSAuRGLjJ6DW4PqX4wId/Kawz35ESampIqHSOTJmbQ8UlxdJuk0gAXKk3Ncle4safGYqM/VeDK3LN5iAJxf4kcaxNtS3eVxWBE5iF3FbIjOqwxw5Lf5sRa5yXxA8HfWidhbIG5TqKL922hPgsCGABIrXRlfZYeC0FEuPWdr6smOElSVvIXthRWp9cr685KdCI+COxlj1RdVsvIo+zunmLACF9PYdjB2s96Fn0ocD3c5SGLvDOFCyvDojSAOyE70ebIElnskKsDTGwfT4P6jh9OBzTyQEIS2jOaE5RQq4IB4DsMhvbjDSQrP0MdCLgwkN
+
+//save and exit the file
+T
+HEN CHECK YOUR CODE
