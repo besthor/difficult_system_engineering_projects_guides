@@ -13,4 +13,4 @@ Thank you for your support!
 - If you are still encountering errors, you may find helpful guides for common possible error messages in the respective error_files. These guides are designed to assist you in troubleshooting and resolving any issues you may encounter.
 
 # `Updates`
-- This repository will be updated as necessary to ensure that the information provided is accurate and up-to-date. Therefore, you can expect updates to be made periodically to reflect any changes or improvements.
+- To ensure that the information provided is accurate and up-to-date, you can expect updates to be made periodically to reflect any changes or improvements.
