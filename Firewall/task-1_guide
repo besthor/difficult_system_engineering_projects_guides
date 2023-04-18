@@ -1,0 +1,144 @@
+QUIZ:
+
+QUESTION:
+What are the 2 types of firewall?
+
+A.Soft and hard firewall
+
+
+B.Network and host-based firewall
+
+
+C.Incoming and outgoing firewall
+
+ANSWER:
+The two types of firewall are network-based firewall and host-based firewall.
+
+Network-based firewall: This type of firewall is usually implemented at the network perimeter and 
+operates by monitoring incoming and outgoing traffic to and from the network. 
+It can be a hardware appliance or a software application that runs on a dedicated server.
+
+Host-based firewall: This type of firewall is installed on individual hosts or endpoints, such as desktops or servers. 
+It operates by monitoring and filtering traffic based on rules configured on the specific host.
+
+The other classifications you mentioned, such as soft/hard firewall or incoming/outgoing firewall, 
+are not commonly used to categorize firewalls.
+
+
+QUESTION:
+What is the main function of a firewall?
+
+
+A.To filter incoming and outgoing network traffic
+
+
+B.To filter outgoing traffic
+
+
+C.To filter incoming and outgoing TCP traffic
+
+ANSWER:
+The main function of a firewall is to filter incoming and outgoing network traffic based on a set of predefined security rules. 
+Firewalls act as a barrier between an organization's internal network and the internet or other external networks.
+
+Firewalls examine network traffic to determine if it should be allowed to pass through to its intended destination or if it should be blocked. 
+The filtering rules can be based on various criteria, such as IP addresses, protocols, ports, and packet contents.
+
+By blocking unauthorized or malicious traffic and allowing only legitimate traffic to pass through, 
+firewalls help to protect organizations from various types of cyber attacks, such as hacking, malware, and denial-of-service attacks.
+They also help to prevent data breaches and protect sensitive information.
+
+
+QUESTION:
+
+What is a firewall?
+
+
+A. A hardware security system
+
+
+B. A software security system
+
+
+C. A hardware or software security system
+
+ANSWER:
+A firewall is a security system that can be either hardware or software-based, 
+which helps to protect computer networks from unauthorized access 
+or malicious attacks from the internet or other external networks.
+
+Firewalls are designed to filter network traffic and prevent unauthorized access to a network by blocking incoming traffic that does not meet 
+specific security criteria, such as the type of traffic, its source and destination, and other protocol-related information. 
+Firewalls can also be configured to allow specific types of traffic to pass through, based on the organization's security policies.
+
+Hardware firewalls are physical devices that are installed between the organization's network and the internet,
+ while software firewalls are installed on individual computer systems. 
+Both types of firewalls can be effective in protecting a network from unauthorized access, 
+and the choice between them depends on the organization's specific security needs and budget.
+
+
+HOW TO GO ABOUT THE TASKS
+TASK 0
+
+Let’s install the ufw firewall and setup a few rules on web-01.
+BUT FIRST CONNECT TO YOUR WEB-01 SERVER
+OPEN YOUR UBUNTU 20.04 LTS SANDBOX
+RUN THE FOLLOWING COMMANDS
+
+	cd /root
+	cd .ssh
+	ls
+	eval $('ssh-agent')
+	ssh-add school
+	ssh ubuntu@18.234.168.34
+
+PLEASE NOTE:
+REPLACE 18.234.168.34 with your own IP ADDRESS 
+
+IF YOU HAVE CONNECTED SUCCESSFULLY
+CARRY OUT THE FOLLOWING STEPS BELOW:
+
+//Configure ufw so that it blocks all incoming traffic, except the following TCP ports:
+	22 (SSH)
+	443 (HTTPS SSL)
+	80 (HTTP)
+
+//To configure the Uncomplicated Firewall (ufw) to block all incoming traffic except 
+for TCP ports 22, 443, and 80, you can follow these steps:
+
+//Open a terminal or SSH session to the server where ufw is installed.
+
+//Check the status of ufw to make sure it is active by running the following command:
+
+	sudo ufw status
+
+//If ufw is not active, you can enable it by running:
+
+	sudo ufw enable
+
+//Set the default outgoing policy to "allow" to allow all outgoing traffic by running the following command:
+	sudo ufw default allow outgoing
+
+//Set the default incoming policy to "deny" to block all incoming traffic by running the following command:
+
+	sudo ufw default deny incoming
+
+//Allow incoming traffic on TCP ports 22, 443, and 80 by running the following commands:
+
+	sudo ufw allow 22/tcp
+	
+	sudo ufw allow 443/tcp
+	
+	sudo ufw allow 80/tcp
+
+//Verify that the rules have been added by running the following command:
+
+	sudo ufw show added
+
+//This should show the three TCP ports that were allowed in the previous step.
+
+//Finally, enable ufw by running:
+
+	sudo ufw enable
+
+//Your ufw configuration should now block all incoming traffic except for the TCP ports 22 (SSH), 443 (HTTPS SSL), and 80 (HTTP)
