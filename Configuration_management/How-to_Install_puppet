@@ -1,0 +1,35 @@
+NOTE
+//Your UBUNTU 20.04 VM should have Puppet 5.5 preinstalled.
+
+BUT IF IT ISN'T, THEN USE
+UBUNTU 20.04 - PUPPET sandbox
+
+//Install puppet running the following commands one after the other
+
+sudo apt-get install -y ruby=1:2.7+1 --allow-downgrades
+
+sudo apt-get install -y ruby-augeas
+
+sudo apt-get install -y ruby-shadow
+
+sudo apt-get install -y puppet
+
+//You actully do not need to attempt to upgrade versions. 
+This project is simply a set of tasks to familiarize you with the basic level syntax which is virtually identical in newer versions of Puppet.
+
+INSTALL PUPPET-LINT
+//Puppet-lint is a tool for checking the style and syntax of Puppet manifests. It is a command-line utility that examines Puppet code to ensure that it follows established style guidelines and best practices.
+//Puppet-lint can be used to catch errors and enforce consistency across Puppet code, which can help make it more maintainable and easier to read. It can also be customized to include or exclude certain checks or to follow specific style guidelines.
+
+//Puppet-lint is written in Ruby and is open source software, with its source code and documentation available on GitHub. It can be integrated with Continuous Integration (CI) systems, such as Travis CI or Jenkins, to automatically test and validate Puppet code changes before they are merged into a codebase.
+
+
+sudo gem install puppet-lint
+
+//check the version of puppet by running the following command:
+
+puppet-lint --version
+
+//check the version of flsk by running the following command:
+
+flask --version
