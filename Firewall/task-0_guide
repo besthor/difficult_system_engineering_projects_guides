@@ -1,4 +1,7 @@
-Let’s install the ufw firewall and setup a few rules on web-01.
+THESE INSRUCTIONS WILL NOT BE SUCCESSFUL IF YOU HAVE NOT DONE THE SSH TASK
+Kindly find instructions to go about it in this repository
+
+Alright, Let’s install the ufw firewall and setup a few rules on web-01.
 BUT FIRST CONNECT TO YOUR WEB-01 SERVER
 OPEN YOUR (UBUNTU 20.04 LTS) SANDBOX
 RUN THE FOLLOWING COMMANDS
