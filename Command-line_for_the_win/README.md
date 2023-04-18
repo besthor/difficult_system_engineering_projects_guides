@@ -1,4 +1,7 @@
 # `Welcome to "Command line for the win"!`
-- Are you ready to put your Linux skills to the ultimate test and prove that you have what it takes to survive these stages?
+   
+- I heard you are a Linux Ninja
+- Alright that's cool! but are you ready to put your Linux skills to the ultimate test and prove that you have what it takes to survive these stages?
+
+## `Then show us what you're made of!`
 - Let's get started 
-<h2>Then show us what you're made of!</h>
