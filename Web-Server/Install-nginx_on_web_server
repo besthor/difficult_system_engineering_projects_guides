@@ -45,7 +45,7 @@ sudo apt install nginx
 
 # Verify that nginx is running:
 
-sudo systemctl status nginx
+sudo service status nginx
 
 //This command will display the status of nginx. If nginx is running,
 you should see a message indicating that it is active.
