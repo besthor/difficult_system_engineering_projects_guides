@@ -1,9 +1,36 @@
 TASK 1.
-THIS TASK MUST BE DONE ON YOUR SERVER
+STEP 1. THIS TASK MUST BE DONE ON YOUR SERVER
 FIRST LOGIN TO YOUR SERVER
-    HOW TO LOGIN TO YOUR SERVER
-    1.
-//Here are the steps to install nginx on a web server:
+
+HOW TO CONNECT TO YOUR WEB-01 SERVER
+1. PLEASE OPEN YOUR (UBUNTU 20.04 LTS) SANDBOX AND RUN THE FOLLOWING COMMANDS
+
+	cd /root
+  	ls -a
+	cd .ssh
+	ls
+	
+2. //create a shell environment variable that contains information about the new agent instance
+	
+  eval $('ssh-agent')
+
+3.//add the private key file for the "school" SSH key pair to the ssh-agent.	
+
+  ssh-add ~/.ssh/school
+
+PLEASE NOTE:
+4. In the next command, REPLACE 18.234.168.34 with YOUR OWN IP ADDRESS 
+//connect with your server
+
+  ssh ubuntu@18.234.168.34
+
+IF YOU HAVE CONNECTED SUCCESSFULLY you should see something like this:
+ubuntu@web-01-server:~$
+
+NOW,You can begin the tasks in the project
+    
+STEP 2: HOW TO INSTALL NGINX ON A WEB SERVER
+//Now that you are in your server, Here are the steps to install nginx on a web server:
 
 # Update the package index:
 sudo apt update
@@ -20,11 +47,13 @@ sudo apt install nginx
 
 sudo systemctl status nginx
 
-//This command will display the status of nginx. If nginx is running, you should see a message indicating that it is active.
+//This command will display the status of nginx. If nginx is running,
+you should see a message indicating that it is active.
 
 # Configure the firewall:
-# If you have a firewall enabled on your server, you will need to allow traffic on port 80 (HTTP) and 443 (HTTPS) 
-so that nginx can serve web pages. For example, if you are using UFW as your firewall, you can allow traffic on these ports with the following commands:
+If you have a firewall enabled on your server, you will need to allow traffic on port 80 (HTTP) and 443 (HTTPS) 
+so that nginx can serve web pages. For example, if you are using UFW as your firewall, 
+you can allow traffic on these ports with the following commands:
 
 sudo ufw allow 'Nginx Full'
 
