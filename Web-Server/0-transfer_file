@@ -1,0 +1,20 @@
+TASK 0. Transfer a file to your server
+PLEASE DON'T FORGET TO MAKE THE FILE EXECUTABLE chmod u+x
+CONTENT OF THE FILE
+
+
+#!/usr/bin/env bash
+# This script first checks if there are at least 4 parameters passed,
+# if not it will display the usage message.
+
+if [ "$#" -lt 4 ]; then
+  echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+  exit 1
+fi
+
+path_to_file=$1
+ip=$2
+username=$3
+path_to_ssh_key=$4
+
+scp -o StrictHostKeyChecking=no -i "$path_to_ssh_key" "$path_to_file" "$username"@"$ip":~
