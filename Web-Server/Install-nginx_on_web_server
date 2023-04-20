@@ -1,9 +1,11 @@
 TASK 1.
+THIS TASK MUST BE DONE ON YOUR SERVER
+FIRST LOGIN TO YOUR SERVER
+    HOW TO LOGIN TO YOUR SERVER
+    1.
 //Here are the steps to install nginx on a web server:
 
 # Update the package index:
-
-
 sudo apt update
 
 //This will update the package index on your server and ensure that you can install the latest version of nginx.
@@ -21,7 +23,8 @@ sudo systemctl status nginx
 //This command will display the status of nginx. If nginx is running, you should see a message indicating that it is active.
 
 # Configure the firewall:
-# If you have a firewall enabled on your server, you will need to allow traffic on port 80 (HTTP) and 443 (HTTPS) so that nginx can serve web pages. For example, if you are using UFW as your firewall, you can allow traffic on these ports with the following commands:
+# If you have a firewall enabled on your server, you will need to allow traffic on port 80 (HTTP) and 443 (HTTPS) 
+so that nginx can serve web pages. For example, if you are using UFW as your firewall, you can allow traffic on these ports with the following commands:
 
 sudo ufw allow 'Nginx Full'
 
@@ -33,7 +36,9 @@ You should see the default nginx welcome page, indicating that nginx is installe
 
 That's it! You now have nginx installed on your web server and are ready to start serving web pages.
 
+
 CONTENT FOR YOUR 1-install_nginx_web_server FILE
+DON'T FORGET TO MAKE IT EXECUTABLE BY USING chmod u+x
 
 #!/usr/bin/env bash
 # Installs nginx server on an ubuntu linux distro.
