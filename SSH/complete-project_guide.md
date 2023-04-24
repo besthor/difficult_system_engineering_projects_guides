@@ -6,8 +6,7 @@
 --
 
 
-`# STEP 1.` 
-## HOW TO GENERATE YOUR SSH KEY
+# `STEP 1.` HOW TO GENERATE YOUR SSH KEY
 
 Get your sandbox (UBUNTU 20.04)
 
@@ -17,7 +16,7 @@ Get your sandbox (UBUNTU 20.04)
 `ssh-keygen -t rsa -b 4096 -f ~/.ssh/school`
 
 
-YOUR PASSPHRASE SHOULD BE: betty
+Your PASSPHRASE shoud BE: betty
 
 
 `ls -a`
@@ -26,25 +25,24 @@ YOUR PASSPHRASE SHOULD BE: betty
 
 `vi school.pub`
 
-### Copy the RSA and save on your INTRANET PROFILE
+Copy the RSA and save on your `INTRANET PROFILE`
 
-Click "Save your information"
+Click `Save your information`
 
 Then, go back to the project and scroll down
 
-## Just before TASK 0, 
+Just before TASK 0, 
 
 Request for a new server
 
-## Make sure your server's state is "RUNNING"
+Make sure your server's state is `RUNNING`
 HERE IS AN EXAMPLE
 ---
 Name		Username	IP		State	
 160670-web-01	ubuntu		54.208.69.207	running
 ---
 
-`STEP 2.` 
-# HOW TO LOGIN TO YOUR SERVER
+`STEP 2.` HOW TO LOGIN TO YOUR SERVER
 
 `cd /root`
 
@@ -54,11 +52,11 @@ Name		Username	IP		State
 
 `ssh-add ~/.ssh/school`
 
-## PLEASE REPLACE THE IP ADDRESS BELOW WITH YOUR OWN IP ADDRESS
+PLEASE REPLACE THE IP ADDRESS BELOW WITH YOUR OWN IP ADDRESS
 
 `ssh ubuntu@54.208.69.207`
 
-# PLEASE NOTE:
+NOTE:
 IF YOUR SERVER SAYS "PERMISSION DENIED",PLEASE DON'T FORCE THINGS
 THERE'S PROBABLY SOMETHING  WRONG WITH THE PUBLIC KEY YOU PASTED ON YOUR INTRANET PROFILE
 
@@ -81,16 +79,15 @@ BUT IF YOU HAVE SUCCESSFULLY CONNECTED TO YOUR SERVER, THEN CONTINUE THE FOLLOWI
 
 `sudo vim authorised_keys`
 
-## Add the RSA public key from your project TASK 3 to your authorized_keys file
+Add the RSA public key from your project TASK 3 to your authorized_keys file
 
 `Save and exit`
 
-## THEN CHECK YOUR CODE FOR TASK 3
+THEN CHECK YOUR CODE FOR TASK 3
 
 
 
-`STEP 3.` 
-# OPEN ANOTHER SANDBOX
+`STEP 3.` OPEN ANOTHER SANDBOX
 
 `cd  alx-system_engineering-devops`
 
@@ -98,7 +95,8 @@ BUT IF YOU HAVE SUCCESSFULLY CONNECTED TO YOUR SERVER, THEN CONTINUE THE FOLLOWI
 
 `cd 0x0B-SSH`
 
-## Create a README.md file with some content in it
+Create a README.md file with some content in it
+
 ---
 `TASK 0.` 
 
@@ -188,7 +186,7 @@ file_line { 'Declare identity file':
 }
 
 
-## Make it executable chmod u+x 100-puppet_ssh_config.pp
+Make it executable chmod u+x 100-puppet_ssh_config.pp
 
 ---
 
