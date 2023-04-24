@@ -59,13 +59,13 @@ PLEASE REPLACE THE IP ADDRESS BELOW WITH YOUR OWN IP ADDRESS
 
 NOTE:
 IF YOUR SERVER SAYS "PERMISSION DENIED",PLEASE DON'T FORCE THINGS
-THERE'S PROBABLY SOMETHING  WRONG WITH THE PUBLIC KEY YOU PASTED ON YOUR INTRANET PROFILE
+<br>THERE'S PROBABLY SOMETHING  WRONG WITH THE PUBLIC KEY YOU PASTED ON YOUR INTRANET PROFILE</br>
 
-I WILL ADVICE YOU TO BE MORE CAREFULL,BUT DELETE THE .SSH DIRECTORY AND START ALL OVER AGAIN FROM STEP 1.
+<br>I WILL ADVICE YOU TO BE MORE CAREFULL,BUT DELETE THE .SSH DIRECTORY AND START ALL OVER AGAIN FROM STEP 1.</br>
 
-OR YOU WILL JUST BE GOING IN AN ENDLES CIRCLE OF "PERMISSION DENIED"
+<br>OR YOU WILL JUST BE GOING IN AN ENDLES CIRCLE OF "PERMISSION DENIED"</br>
 
-THE COMMAND BELLOW IS FOR THOSE WHOSE SERVER IS SAYING "PERMISSION DENIED"
+<br>THE COMMAND BELLOW IS FOR THOSE WHOSE SERVER IS SAYING "PERMISSION DENIED"</br>
 
 
 `rm -r .ssh`
@@ -105,7 +105,7 @@ Create a README.md file with some content in it
 #!/usr/bin/env bash
 <br># A Bash script that uses ssh to connect to your server</br>
 
-ssh -i ~/.ssh/school ubuntu@54.208.69.207
+<br>ssh -i ~/.ssh/school ubuntu@54.208.69.207</br>
 
 Make it executable chmod u+x 0-use_a_private_key
 
@@ -115,7 +115,7 @@ Make it executable chmod u+x 0-use_a_private_key
 #!/usr/bin/env bash
 <br># A script that Generates an RSA key pair with 4096 bits and passphrase "betty"</br>
 
-ssh-keygen -t rsa -b 4096 -P betty -f school
+<br>ssh-keygen -t rsa -b 4096 -P betty -f school</br>
 
 Make it execute chmod u+x 1-create_ssh_key_pair
 
@@ -127,12 +127,12 @@ Make it execute chmod u+x 1-create_ssh_key_pair
 <br># Configure ssh client to use public key authentication and other settings</br>
 
 Host *
-    SendEnv LANG LC_*
-    HashKnownHosts yes
-    GSSAPIAuthentication yes
-    GSSAPIDelegateCredentials no
-    IdentityFile ~/.ssh/school
-    PasswordAuthentication no
+    <br>SendEnv LANG LC_*</br>
+    <br>HashKnownHosts yes</br>
+    <br>GSSAPIAuthentication yes</br>
+    <br>GSSAPIDelegateCredentials no</br>
+    <br>IdentityFile ~/.ssh/school</br>
+    <br>PasswordAuthentication no</br>
 
 Make it executable chmod u+x 2-ssh_config
 # `TASK 3.`
@@ -166,15 +166,15 @@ THEN CHECK YOUR CODE FOR TASK 3
 <br># Puppet manifest to configure ssh client with public key authentication</br>
 
 file_line { 'Turn off password authentication':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => 'PasswordAuthentication no',
+  <br> ensure => 'present',</br>
+  <br>path   => '/etc/ssh/ssh_config',</br>
+  <br>line   => 'PasswordAuthentication no',</br>
 }
 
 file_line { 'Declare identity file':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => 'IdentityFile ~/.ssh/school',
+ <br> ensure => 'present',</br>
+ <br> path   => '/etc/ssh/ssh_config',</br>
+ <br>line   => 'IdentityFile ~/.ssh/school',</br>
 }
 
 
