@@ -107,7 +107,7 @@ Create a README.md file with some content in it
 
 ```
 # `TASK 0.` 
-![](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/0-use_a_private_key)
+[](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/0-use_a_private_key)
 
 ## `vi 0-use_a_private_key`
 
