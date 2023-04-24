@@ -3,7 +3,7 @@
          				I post helpful resources and guides on my Github 
 					kindly follow me to stay up to date with my work
 					
---
+---
 
 
 # `STEP 1.` HOW TO GENERATE YOUR SSH KEY
@@ -106,7 +106,7 @@ cd 0x0B-SSH
 Create a README.md file with some content in it
 
 ```
-# `TASK 0.` [](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/0-use_a_private_key)
+# `TASK 0.` ![](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/0-use_a_private_key)
 
 ## `vi 0-use_a_private_key`
 
@@ -119,7 +119,7 @@ ssh -i ~/.ssh/school ubuntu@54.209.217.190
 
 Make it execute chmod u+x 0-use_a_private_key
 
-# `TASK 1` [](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/1-create_ssh_key_pair)
+# `TASK 1` ![](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/1-create_ssh_key_pair)
 
 ## `vi 1-create_ssh_key_pair`
 
@@ -134,19 +134,20 @@ Make it execute chmod u+x 1-create_ssh_key_pair
 
 # `TASK 2.`
 
-## `vi 2-ssh_config` [](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/2-ssh_config)
+## `vi 2-ssh_config` ![](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/2-ssh_config)
 
 ```
 #!/usr/bin/env bash
 # Configure ssh client to use public key authentication and other settings
 
+# Configure ssh client to use public key authentication and other settings
 Host *
- 	SendEnv LANG LC_*
-	HashKnownHosts yes
-	GSSAPIAuthentication yes
-	GSSAPIDelegateCredentials no
-	IdentityFile ~/.ssh/school
-	PasswordAuthentication no
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
 ```
 Make it executable chmod u+x 2-ssh_config
 
@@ -176,23 +177,21 @@ Save and exit
 ```
 THEN CHECK YOUR CODE FOR TASK 3
 
-# `TASK 4.` [](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/100-puppet_ssh_config.pp)
+# `TASK 4.` ![](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/100-puppet_ssh_config.pp)
 ## `vi 100-puppet_ssh_config.pp`
 
 ```
-#!/usr/bin/env bash
 # Puppet manifest to configure ssh client with public key authentication
-
 file_line { 'Turn off password authentication':
-	ensure => 'present',
-	path   => '/etc/ssh/ssh_config',
-	line   => 'PasswordAuthentication no',
+  ensure => 'present',
+  path   => '/etc/ssh/ssh_config',
+  line   => 'PasswordAuthentication no',
 }
 
 file_line { 'Declare identity file':
-	ensure => 'present',
-	path   => '/etc/ssh/ssh_config',
-	line   => 'IdentityFile ~/.ssh/school',
+  ensure => 'present',
+  path   => '/etc/ssh/ssh_config',
+  line   => 'IdentityFile ~/.ssh/school',
 }
 
 ```
