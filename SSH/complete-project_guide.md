@@ -38,11 +38,12 @@ Request for a new server
 Make sure your server's state is `RUNNING`
 HERE IS AN EXAMPLE
 ---
-Name		Username	IP		State	
-160670-web-01	ubuntu		54.208.69.207	running
+Name		|Username	|IP		|State	
+---
+160670-web-01	|ubuntu		|54.208.69.207	|running
 ---
 
-`STEP 2.` HOW TO LOGIN TO YOUR SERVER
+# `STEP 2.` HOW TO LOGIN TO YOUR SERVER
 
 `cd /root`
 
@@ -87,7 +88,7 @@ THEN CHECK YOUR CODE FOR TASK 3
 
 
 
-`STEP 3.` OPEN ANOTHER SANDBOX
+# `STEP 3.` OPEN ANOTHER SANDBOX
 
 `cd  alx-system_engineering-devops`
 
@@ -97,8 +98,7 @@ THEN CHECK YOUR CODE FOR TASK 3
 
 Create a README.md file with some content in it
 
----
-`TASK 0.` 
+# `TASK 0.` 
 
 `vi 0-use_a_private_key`
 
@@ -107,12 +107,9 @@ Create a README.md file with some content in it
 
 ssh -i ~/.ssh/school ubuntu@54.208.69.207
 
-
 Make it executable chmod u+x 0-use_a_private_key
----
 
-`Task 1:`
----
+# `Task 1:`
 `vi 1-create_ssh_key_pair`
 
 #!/usr/bin/env bash
@@ -121,10 +118,9 @@ Make it executable chmod u+x 0-use_a_private_key
 ssh-keygen -t rsa -b 4096 -P betty -f school
 
 Make it execute chmod u+x 1-create_ssh_key_pair
----
 
-`TASK 2.`
----
+# `TASK 2.`
+
 `vi 2-ssh_config`
 
 #!/usr/bin/env bash
@@ -139,9 +135,7 @@ Host *
     PasswordAuthentication no
 
 Make it executable chmod u+x 2-ssh_config
----
-
-`TASK 3.`
+# `TASK 3.`
 
 `eval $('ssh-agent')`
 
@@ -164,10 +158,8 @@ Add the RSA public key from your project TASK 3 to your authorized_keys file
 Save and exit
 
 THEN CHECK YOUR CODE FOR TASK 3
----
 
----
-`# TASK 4.` 
+# `TASK 4.` 
 `vi 100-puppet_ssh_config.pp`
 
 #!/usr/bin/env bash
@@ -188,7 +180,7 @@ file_line { 'Declare identity file':
 
 Make it executable chmod u+x 100-puppet_ssh_config.pp
 
----
+
 
 
 `# CONGRATULATIONS ON SUCCESSFULLY COMPLETING THE SSH PROJECT!!`
