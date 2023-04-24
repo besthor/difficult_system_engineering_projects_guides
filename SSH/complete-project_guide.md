@@ -118,7 +118,7 @@ Create a README.md file with some content in it
 ssh -i ~/.ssh/school ubuntu@54.209.217.190
 ```
 
-Make it execute chmod u+x 0-use_a_private_key
+Make it executable chmod u+x 0-use_a_private_key
 
 # `TASK 1` 
 ![](https://github.com/besthor/alx-system_engineering-devops/blob/master/0x0B-ssh/1-create_ssh_key_pair)
@@ -132,7 +132,7 @@ Make it execute chmod u+x 0-use_a_private_key
 ssh-keygen -t rsa -b 4096 -P betty -f school
 ```
 
-Make it execute chmod u+x 1-create_ssh_key_pair
+Make it executable chmod u+x 1-create_ssh_key_pair
 
 # `TASK 2.`
 
