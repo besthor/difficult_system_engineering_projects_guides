@@ -103,7 +103,7 @@ Create a README.md file with some content in it
 `vi 0-use_a_private_key`
 
 #!/usr/bin/env bash
-#a Bash script that uses ssh to connect to your server
+- a Bash script that uses ssh to connect to your server
 
 ssh -i ~/.ssh/school ubuntu@54.208.69.207
 
@@ -113,7 +113,7 @@ Make it executable chmod u+x 0-use_a_private_key
 `vi 1-create_ssh_key_pair`
 
 #!/usr/bin/env bash
-#A script that Generates an RSA key pair with 4096 bits and passphrase "betty"
+- A script that Generates an RSA key pair with 4096 bits and passphrase "betty"
 
 ssh-keygen -t rsa -b 4096 -P betty -f school
 
@@ -124,7 +124,7 @@ Make it execute chmod u+x 1-create_ssh_key_pair
 `vi 2-ssh_config`
 
 #!/usr/bin/env bash
-#Configure ssh client to use public key authentication and other settings
+- Configure ssh client to use public key authentication and other settings
 
 Host *
     SendEnv LANG LC_*
@@ -163,7 +163,7 @@ THEN CHECK YOUR CODE FOR TASK 3
 `vi 100-puppet_ssh_config.pp`
 
 #!/usr/bin/env bash
-#Puppet manifest to configure ssh client with public key authentication
+- Puppet manifest to configure ssh client with public key authentication
 
 file_line { 'Turn off password authentication':
   ensure => 'present',
