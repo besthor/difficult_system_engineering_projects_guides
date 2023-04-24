@@ -90,6 +90,7 @@ THEN CHECK YOUR CODE FOR TASK 3
 
 # `STEP 3.` OPEN ANOTHER SANDBOX
 
+```
 `cd  alx-system_engineering-devops`
 
 `mkdir 0x0B-SSH`
@@ -97,32 +98,33 @@ THEN CHECK YOUR CODE FOR TASK 3
 `cd 0x0B-SSH`
 
 Create a README.md file with some content in it
-
+```
 # `TASK 0.` 
-
+```
 `vi 0-use_a_private_key`
 
 #!/usr/bin/env bash
 <br># A Bash script that uses ssh to connect to your server</br>
 
 <br>ssh -i ~/.ssh/school ubuntu@54.208.69.207</br>
-
+```
 Make it executable chmod u+x 0-use_a_private_key
 
 # `Task 1:`
 `vi 1-create_ssh_key_pair`
 
+```
 #!/usr/bin/env bash
 <br># A script that Generates an RSA key pair with 4096 bits and passphrase "betty"</br>
 
 <br>ssh-keygen -t rsa -b 4096 -P betty -f school</br>
 
 Make it execute chmod u+x 1-create_ssh_key_pair
-
+```
 # `TASK 2.`
 
 `vi 2-ssh_config`
-
+```
 #!/usr/bin/env bash
 <br># Configure ssh client to use public key authentication and other settings</br>
 
@@ -133,10 +135,11 @@ Host *
     <br>GSSAPIDelegateCredentials no</br>
     <br>IdentityFile ~/.ssh/school</br>
     <br>PasswordAuthentication no</br>
-
+```
 Make it executable chmod u+x 2-ssh_config
-# `TASK 3.`
 
+# `TASK 3.`
+```
 `eval $('ssh-agent')`
 
 `ssh-add ~/.ssh/school`
@@ -156,12 +159,12 @@ PLEASE REPLACE THE IP ADDRESS BELOW WITH YOUR OWN IP ADDRESS
 Add the RSA public key from your project TASK 3 to your authorized_keys file
 
 Save and exit
-
+```
 THEN CHECK YOUR CODE FOR TASK 3
 
 # `TASK 4.` 
 `vi 100-puppet_ssh_config.pp`
-
+```
 #!/usr/bin/env bash
 <br># Puppet manifest to configure ssh client with public key authentication</br>
 
@@ -177,10 +180,10 @@ file_line { 'Declare identity file':
  <br>line   => 'IdentityFile ~/.ssh/school',</br>
 }
 
-
+```
 Make it executable chmod u+x 100-puppet_ssh_config.pp
 
-
+![task3]https://github.com/besthor/difficult-system_engineering_projects_guides/blob/main/SSH/complete-project_guide.md
 
 
 # `CONGRATULATIONS ON SUCCESSFULLY COMPLETING THE SSH PROJECT!!`
