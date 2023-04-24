@@ -1,21 +1,21 @@
-# 'SSH PEER LEARNING'
+`# SSH PEER LEARNING'
 ---
          				I post helpful resources and guides on my Github 
 					kindly follow me to stay up to date with my work
 					
----
+--
 
 
 `STEP 1.` ## HOW TO GENERATE YOUR SSH KEY
 
 Get your sandbox (UBUNTU 20.04)
 
----
+--
 cd /root
----
----
+--
+--
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/school
----
+--
 
 YOUR PASSPHRASE SHOULD BE: betty
 
