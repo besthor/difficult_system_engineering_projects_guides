@@ -10,20 +10,21 @@
 
 Get your sandbox (UBUNTU 20.04)
 
+```
 
-`cd /root`
+cd /root
 
-`ssh-keygen -t rsa -b 4096 -f ~/.ssh/school`
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/school
 
-![`task 3`](https://github.com/besthor/difficult-system_engineering_projects_guides/blob/main/SSH/complete-project_guide.md)
+
 Your PASSPHRASE shoud BE: betty
 
 
-`ls -a`
+ls -a
 
-`cd .ssh`
+cd .ssh
 
-`vi school.pub`
+vi  school.pub
 
 Copy the RSA and save on your `INTRANET PROFILE`
 
@@ -42,21 +43,24 @@ Name		Username	IP		State
 ---
 160670-web-01	ubuntu		54.208.69.207	running
 ---
+```
 
 # `STEP 2.` HOW TO LOGIN TO YOUR SERVER
 
-`cd /root`
+```
+cd /root`
 
-`cd .ssh`
+cd .ssh`
 
-`eval $('ssh-agent')`
+eval $('ssh-agent')
 
-`ssh-add ~/.ssh/school`
+ssh-add ~/.ssh/school
 
 PLEASE REPLACE THE IP ADDRESS BELOW WITH YOUR OWN IP ADDRESS
 
-`ssh ubuntu@54.208.69.207`
+ssh ubuntu@54.208.69.207
 
+```
 NOTE:
 IF YOUR SERVER SAYS "PERMISSION DENIED",PLEASE DON'T FORCE THINGS
 <br>THERE'S PROBABLY SOMETHING  WRONG WITH THE PUBLIC KEY YOU PASTED ON YOUR INTRANET PROFILE</br>
@@ -72,118 +76,117 @@ IF YOUR SERVER SAYS "PERMISSION DENIED",PLEASE DON'T FORCE THINGS
 
 BUT IF YOU HAVE SUCCESSFULLY CONNECTED TO YOUR SERVER, THEN CONTINUE THE FOLLOWING COMMANDS: 
 
-`ls -a`
+```
+ls -a
 
-`cd .ssh`
+cd .ssh
 
-`ls -a`
+ls -a
 
-`sudo vim authorised_keys`
+sudo vim authorised_keys
 
 Add the RSA public key from your project TASK 3 to your authorized_keys file
 
-`Save and exit`
+Save and exit
 
 THEN CHECK YOUR CODE FOR TASK 3
 
+```
 
 
 # `STEP 3.` OPEN ANOTHER SANDBOX
 
 ```
-`cd  alx-system_engineering-devops`
+cd  alx-system_engineering-devops
 
-`mkdir 0x0B-SSH`
+mkdir 0x0B-SSH
 
-`cd 0x0B-SSH`
+cd 0x0B-SSH
 
 Create a README.md file with some content in it
+
 ```
 # `TASK 0.` 
-```
-`vi 0-use_a_private_key`
 
-#!/usr/bin/env bash
-<br># A Bash script that uses ssh to connect to your server</br>
-
-<br>ssh -i ~/.ssh/school ubuntu@54.208.69.207</br>
-```
-Make it executable chmod u+x 0-use_a_private_key
-
-# `Task 1:`
-`vi 1-create_ssh_key_pair`
+## `vi 1-create_ssh_key_pair`
 
 ```
 #!/usr/bin/env bash
-<br># A script that Generates an RSA key pair with 4096 bits and passphrase "betty"</br>
+# A script that Generates an RSA key pair with 4096 bits and passphrase "betty"
 
-<br>ssh-keygen -t rsa -b 4096 -P betty -f school</br>
+ssh-keygen -t rsa -b 4096 -P betty -f school
 
 Make it execute chmod u+x 1-create_ssh_key_pair
+
 ```
+
 # `TASK 2.`
 
-`vi 2-ssh_config`
+## `vi 2-ssh_config`
+
 ```
 #!/usr/bin/env bash
-<br># Configure ssh client to use public key authentication and other settings</br>
+# Configure ssh client to use public key authentication and other settings
 
 Host *
-    <br>SendEnv LANG LC_*</br>
-    <br>HashKnownHosts yes</br>
-    <br>GSSAPIAuthentication yes</br>
-    <br>GSSAPIDelegateCredentials no</br>
-    <br>IdentityFile ~/.ssh/school</br>
-    <br>PasswordAuthentication no</br>
+ 	SendEnv LANG LC_*
+	HashKnownHosts yes
+	GSSAPIAuthentication yes
+	GSSAPIDelegateCredentials no
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
 ```
 Make it executable chmod u+x 2-ssh_config
 
 # `TASK 3.`
-```
-`eval $('ssh-agent')`
 
-`ssh-add ~/.ssh/school`
+```
+eval $('ssh-agent')
+
+ssh-add ~/.ssh/school
 
 PLEASE REPLACE THE IP ADDRESS BELOW WITH YOUR OWN IP ADDRESS
 
-`ssh ubuntu@54.208.69.207`
+ssh ubuntu@54.208.69.207
 
-`ls -a`
+ls -a
 
-`cd .ssh`
+cd .ssh
 
-`ls -a`
+ls -a
 
-`sudo vim authorised_keys`
+sudo vim authorised_keys
 
 Add the RSA public key from your project TASK 3 to your authorized_keys file
 
 Save and exit
+
 ```
 THEN CHECK YOUR CODE FOR TASK 3
 
 # `TASK 4.` 
-`vi 100-puppet_ssh_config.pp`
+## `vi 100-puppet_ssh_config.pp`
+
 ```
 #!/usr/bin/env bash
-<br># Puppet manifest to configure ssh client with public key authentication</br>
+# Puppet manifest to configure ssh client with public key authentication
 
 file_line { 'Turn off password authentication':
-  <br> ensure => 'present',</br>
-  <br>path   => '/etc/ssh/ssh_config',</br>
-  <br>line   => 'PasswordAuthentication no',</br>
+	ensure => 'present',
+	path   => '/etc/ssh/ssh_config',
+	line   => 'PasswordAuthentication no',
 }
 
 file_line { 'Declare identity file':
- <br> ensure => 'present',</br>
- <br> path   => '/etc/ssh/ssh_config',</br>
- <br>line   => 'IdentityFile ~/.ssh/school',</br>
+	ensure => 'present',
+	path   => '/etc/ssh/ssh_config',
+	line   => 'IdentityFile ~/.ssh/school',
 }
 
 ```
 Make it executable chmod u+x 100-puppet_ssh_config.pp
 
-![task3]https://github.com/besthor/difficult-system_engineering_projects_guides/blob/main/SSH/complete-project_guide.md
+![task3](https://github.com/besthor/difficult-system_engineering_projects_guides/blob/main/SSH/complete-project_guide.md)
 
 
 # `CONGRATULATIONS ON SUCCESSFULLY COMPLETING THE SSH PROJECT!!`
