@@ -2,7 +2,7 @@
 ---
          				I post helpful resources and guides on my Github 
 					kindly follow me to stay up to date with my work
-					[@besthor](https://github.com/besthor)
+					[](https://github.com/besthor)
 ---
 
 
