@@ -1,9 +1,9 @@
 # 'SSH PEER LEARNING'
-					---
-          I post helpful resources and guides on my Github 
+---
+         				I post helpful resources and guides on my Github 
 					kindly follow me to stay up to date with my work
 					https://github.com/besthor
-          ---
+---
 
 
 STEP 1.	HOW TO GENERATE YOUR SSH KEY
