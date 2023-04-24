@@ -38,9 +38,9 @@ Request for a new server
 Make sure your server's state is `RUNNING`
 HERE IS AN EXAMPLE
 ---
-Name		|Username	|IP		|State	
+Name		Username	IP		State	
 ---
-160670-web-01	|ubuntu		|54.208.69.207	|running
+160670-web-01	ubuntu		54.208.69.207	running
 ---
 
 # `STEP 2.` HOW TO LOGIN TO YOUR SERVER
@@ -183,4 +183,4 @@ Make it executable chmod u+x 100-puppet_ssh_config.pp
 
 
 
-`# CONGRATULATIONS ON SUCCESSFULLY COMPLETING THE SSH PROJECT!!`
+# `CONGRATULATIONS ON SUCCESSFULLY COMPLETING THE SSH PROJECT!!`
