@@ -6,7 +6,7 @@
 --
 
 
-`STEP 1.` 
+`# STEP 1.` 
 ## HOW TO GENERATE YOUR SSH KEY
 
 Get your sandbox (UBUNTU 20.04)
