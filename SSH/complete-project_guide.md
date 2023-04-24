@@ -15,7 +15,7 @@ Get your sandbox (UBUNTU 20.04)
 
 `ssh-keygen -t rsa -b 4096 -f ~/.ssh/school`
 
-
+# [`task 3`](https://github.com/besthor/difficult-system_engineering_projects_guides/blob/main/SSH/complete-project_guide.md)
 Your PASSPHRASE shoud BE: betty
 
 
