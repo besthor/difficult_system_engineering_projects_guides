@@ -103,12 +103,12 @@ Create a README.md file with some content in it
 `vi 0-use_a_private_key`
 
 #!/usr/bin/env bash
-# a Bash script that uses ssh to connect to your server
+#a Bash script that uses ssh to connect to your server
 
 ssh -i ~/.ssh/school ubuntu@54.208.69.207
 
 
-## Make it executable chmod u+x 0-use_a_private_key
+Make it executable chmod u+x 0-use_a_private_key
 ---
 
 `Task 1:`
@@ -116,11 +116,11 @@ ssh -i ~/.ssh/school ubuntu@54.208.69.207
 `vi 1-create_ssh_key_pair`
 
 #!/usr/bin/env bash
-# A script that Generates an RSA key pair with 4096 bits and passphrase "betty"
+#A script that Generates an RSA key pair with 4096 bits and passphrase "betty"
 
 ssh-keygen -t rsa -b 4096 -P betty -f school
 
-## Make it execute chmod u+x 1-create_ssh_key_pair
+Make it execute chmod u+x 1-create_ssh_key_pair
 ---
 
 `TASK 2.`
@@ -128,7 +128,7 @@ ssh-keygen -t rsa -b 4096 -P betty -f school
 `vi 2-ssh_config`
 
 #!/usr/bin/env bash
-# Configure ssh client to use public key authentication and other settings
+#Configure ssh client to use public key authentication and other settings
 
 Host *
     SendEnv LANG LC_*
@@ -138,7 +138,7 @@ Host *
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
 
-## Make it executable chmod u+x 2-ssh_config
+Make it executable chmod u+x 2-ssh_config
 ---
 
 `TASK 3.`
@@ -147,7 +147,7 @@ Host *
 
 `ssh-add ~/.ssh/school`
 
-## PLEASE REPLACE THE IP ADDRESS BELOW WITH YOUR OWN IP ADDRESS
+PLEASE REPLACE THE IP ADDRESS BELOW WITH YOUR OWN IP ADDRESS
 
 `ssh ubuntu@54.208.69.207`
 
@@ -159,7 +159,7 @@ Host *
 
 `sudo vim authorised_keys`
 
-## Add the RSA public key from your project TASK 3 to your authorized_keys file
+Add the RSA public key from your project TASK 3 to your authorized_keys file
 
 Save and exit
 
@@ -171,7 +171,7 @@ THEN CHECK YOUR CODE FOR TASK 3
 `vi 100-puppet_ssh_config.pp`
 
 #!/usr/bin/env bash
-# Puppet manifest to configure ssh client with public key authentication
+#Puppet manifest to configure ssh client with public key authentication
 
 file_line { 'Turn off password authentication':
   ensure => 'present',
