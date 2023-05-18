@@ -48,9 +48,9 @@ Name		Username	IP		State
 # `STEP 2.` HOW TO LOGIN TO YOUR SERVER
 
 ```
-cd /root`
+cd /root
 
-cd .ssh`
+cd .ssh
 
 eval $('ssh-agent')
 
